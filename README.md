@@ -21,7 +21,7 @@ All the application files are contained in the folder 'app_files'. The goal is t
 - Step 5: Repeat Step 4 but use YAML as your source. RUN the trigger and check the app. Check the cloud Build on https://console.cloud.google.com/cloud-build/triggers?project=my-ml-project-303018
 - Step 6: Take a picture of your app with the sample URL. SUBMIT THIS PICTURE FOR YOUR ASSIGNMENT.
 Now you have uploaded your OWN ML app on GCP with a CD Pipeline! Congratulations..
-- Step 7: Clean up. Please delete ypur Triggers and your ML app before you go.
+- Step 7: Clean up. Please DELETE your Triggers and your ML app before you go.
 
 ### Things to notice
 The local flask app will run on http://0.0.0.0:8080/ (localhost). This is because the GCP app is detected on this port only. This step is native to GCP deployment only.
