@@ -9,7 +9,6 @@ Created on Thu Jan 14 15:32:03 2021
 
 # Importing the libraries
 import numpy as np
-import matplotlib.pyplot as plt
 from flask import Flask, request, jsonify, render_template
 import pandas as pd
 import pickle
