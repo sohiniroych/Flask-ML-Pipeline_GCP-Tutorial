@@ -9,10 +9,12 @@ dataset = pd.read_csv('50_Startup.csv')
 X=dataset.iloc[:,:-1].values
 y=dataset.iloc[:,3].values
 
-from sklearn.tree import DecisionTreeRegressor
-reg=DecisionTreeRegressor(max_depth=5)
+###### START CODE HERE##############################
+#define ANY regression Model here
+reg=#Define Model
 reg.fit(X,y)
 print(reg.score)
+#######################################END here
 
 
 #Save the model
