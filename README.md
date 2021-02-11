@@ -1,20 +1,18 @@
-# Flask Tutorial
-![Flask](https://miro.medium.com/max/1760/1*ZDXzEwWqdDwu95G374AM0g.jpeg)
-
-Read blog on Flask Tutorial at [Build the first Flask Python web app framework](https://medium.com/analytics-vidhya/https-medium-com-chirag6891-build-the-first-flask-python-e278b52473f3)
+# Flask ML Model CD Pipeline Tutorial
+The data set in this exercise is from the blog on Flask Tutorial at [Build the first Flask Python web app framework](https://medium.com/analytics-vidhya/https-medium-com-chirag6891-build-the-first-flask-python-e278b52473f3). This codebase is based on the GCP Pipeline tutorial at [ML Deployment on Cloud](https://github.com/jgvaraujo/ml-deployment-on-gcloud)
 
 ## ML Model Flask-Deployment
-This is a demo project to elaborate how Machine Learn Models are deployed on production using Flask API
+This project demonstrates how a Flask ML app can be deployed on Google Cloud Platform using Docker container and YAML files that are useful to build continuous deployment (CD) pipelines. 
 
-### Prerequisites
+### Prerequisites (requirements.txt)
  - Scikit Learn
  - Pandas 
  - Numpy
  - Flask 
 
 ### Project Structure
-This project has four major parts :
-1. model.py - This contains code fot our Machine Learning model to predict employee salaries absed on trainign data in '50_Startup.csv' file.
+All the application files are contained in the folder 'app_files'. The goal is to build an ML model using Decision Tree Classifier
+1. model.py - This contains code fot our Machine Learning model (Decision Tree model) to predict employee salaries absed on trainign data in '50_Startup.csv' file.
 2. app.py - This contains Flask APIs that receives employee details through GUI or API calls, computes the precited value based on our model and returns it.
 3. request.py - This uses requests module to call APIs already defined in app.py and dispalys the returned value.
 4. templates - This folder contains the HTML template to allow user to enter employee detail and displays the predicted employee salary.
@@ -30,6 +28,12 @@ This would create a serialized version of our model into a file model.pkl
 ```
 python app.py
 ```
-By default, flask will run on http://127.0.0.1:5000/ (localhost)
+The flask app will run on http://0.0.0.0:8080/ (localhost)
 
-3. Navigate to URL http://127.0.0.1:5000/ (localhost)
+
+### Deploying on Google Cloud
+https://console.cloud.google.com/run?project=my-ml-project-303018
+
+https://console.cloud.google.com/cloud-build/triggers?project=my-ml-project-303018
+
+
