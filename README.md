@@ -32,8 +32,16 @@ The flask app will run on http://0.0.0.0:8080/ (localhost)
 
 
 ### Deploying on Google Cloud
-https://console.cloud.google.com/run?project=my-ml-project-303018
+3. Create a Google Cloud Run trigger at: https://console.cloud.google.com/cloud-build/triggers
 
-https://console.cloud.google.com/cloud-build/triggers?project=my-ml-project-303018
+4. Check the deployed app at: https://console.cloud.google.com/run
+
+You now have a deployed app
+
+### Clean up
+
+5. Delete the triggers on the page https://console.cloud.google.com/cloud-build/triggers
+6. Delete the app at:  https://console.cloud.google.com/run
+
 
 
