@@ -23,7 +23,7 @@ x_test=np.array([[16000, 135000, 450000]])
 print(x_test)
 print(model.predict(x_test))
 
-#To generate a best fit line
+#To generate a best fit model
 X_range=np.zeros((50,3))
 y_range=np.zeros((50,))
 for i in range(3):
