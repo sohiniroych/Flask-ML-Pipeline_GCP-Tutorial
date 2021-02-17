@@ -1,11 +1,11 @@
 steps:
-  # pull the container image if it is already built
+  # Step 1: pull the container image if it is already built, if fails do not exit
   - name: 'gcr.io/cloud-builders/docker'
     entrypoint: 'bash'
     args:
       - '-c'
       - 'docker pull gcr.io/$PROJECT_ID/appcicd:latest || exit 0'
-  # build the container image
+   # Step 2: Create a docker image if none exists, esle load existing one
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
@@ -16,12 +16,12 @@ steps:
       - '--cache-from'
       - 'gcr.io/$PROJECT_ID/appcicd:latest'
       - '.'
-  # push the container image to Container Registry with all tags
+  # Step 3: Push the docker image to the run
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
       - 'gcr.io/$PROJECT_ID/appcicd'
-  # deploy container image to Cloud Run
+  # Step 4: Deploy container image to Cloud Run
   - name: 'gcr.io/cloud-builders/gcloud'
     args:
       - 'run'
